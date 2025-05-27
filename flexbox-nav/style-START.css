@@ -43,16 +43,32 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  
+  display: flex;
 }
 
+.flex-nav ul li {
+  flex-grow: 3;
+}
+
+.flex-nav ul li.social {
+  flex-grow: 1;
+}
 
 @media all and (max-width:1000px) {
-  
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+  .flex-nav ul li {
+    width: 50%;
+  }
 
+  .flex-nav ul li.social {
+    width: 25%;
+  }
 }
 
 @media all and (max-width:500px) {
-  
-
+  .flex-nav ul li {
+    width: 100%;
+  }
 }
